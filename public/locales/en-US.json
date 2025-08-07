@@ -1,0 +1,79 @@
+{
+  "toasts": {
+    "notImplemented": {
+      "title": "SYSTEM ALERT // OFFLINE",
+      "description": "This feature is not yet implemented."
+    },
+    "insufficientPlans": {
+      "title": "ERROR // INSUFFICIENT PLANS",
+      "description": "This module is not active."
+    }
+  },
+  "topLeftNav": {
+    "settings": "Settings",
+    "email": "Email",
+    "patchNotes": "Patch Notes",
+    "layout": "Layout"
+  },
+  "player": {
+    "share": "Share Profile"
+  },
+  "mission": {
+    "operation": "OPERATION",
+    "currentChapter": "CURRENT CHAPTER\nDECISIVE BATTLE",
+    "utopia": "UTOPIA"
+  },
+  "rightMenu": {
+    "eligible": { "main": "ELIGIBLE", "sub": "Operator Selection" },
+    "exceptional": { "main": "EXCEPTIONAL", "sub": "Special Units" },
+    "teamUp": { "main": "TEAM UP", "sub": "Squad Formation" },
+    "resonance": { "main": "RESONANCE", "sub": "Upgrade System" },
+    "store": { "main": "STORE", "sub": "Purchase items" },
+    "task": { "main": "TASK", "sub": "Mission List" },
+    "notActive": "NOT ACTIVE",
+    "depot": { "main": "DEPOT", "sub": "View Inventory" }
+  },
+  "footer": {
+    "friends": { "main": "Friends", "sub": "Manage contacts" },
+    "schedule": { "main": "Schedule", "sub": "Weekly missions" },
+    "events": { "main": "Events", "sub": "Limited-time events" }
+  },
+  "banners": {
+    "echoChamberTag": "LIMITED",
+    "echoChamberTitle": "ECHO CHAMBER",
+    "newChapterTag": "NEW CHAPTER",
+    "tidalWaveTitle": "TIDAL WAVE",
+    "specialOperationTag": "SPECIAL OP",
+    "crimsonTroupeTitle": "CRIMSON TROUPE"
+  },
+  "settings": {
+    "title": "Settings",
+    "reset": "Reset to Default",
+    "sidebar": {
+      "game": "Game",
+      "volume": "Volume",
+      "notification": "Notification",
+      "others": "Others",
+      "userCenter": "User Center"
+    },
+    "game": {
+      "title": "Game Settings",
+      "layoutMode": {
+        "title": "Layout Mode",
+        "description": "Choose between a responsive layout or a fixed size.",
+        "responsive": "Responsive",
+        "fixed": "Fixed (1500x800)"
+      },
+      "language": {
+        "title": "Language",
+        "description": "Select the display language for the game.",
+        "en": "English (USA)",
+        "pt": "Português (BR)"
+      }
+    },
+    "underConstruction": {
+      "title": "Under Construction",
+      "description": "This section is currently under development."
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "toasts": {
+    "notImplemented": {
+      "title": "ALERTA DO SISTEMA // OFFLINE",
+      "description": "Esta funcionalidade ainda não foi implementada."
+    },
+    "insufficientPlans": {
+      "title": "ERRO // PLANOS INSUFICIENTES",
+      "description": "Este módulo não está ativo."
+    }
+  },
+  "topLeftNav": {
+    "settings": "Configurações",
+    "email": "E-mail",
+    "patchNotes": "Notas de Atualização",
+    "layout": "Layout"
+  },
+  "player": {
+    "share": "Compartilhar Perfil"
+  },
+  "mission": {
+    "operation": "OPERAÇÃO",
+    "currentChapter": "CAPÍTULO ATUAL\nBATALHA DECISIVA",
+    "utopia": "UTOPIA"
+  },
+  "rightMenu": {
+    "eligible": { "main": "ELEGÍVEL", "sub": "Seleção de Operador" },
+    "exceptional": { "main": "EXCEPCIONAL", "sub": "Unidades Especiais" },
+    "teamUp": { "main": "EQUIPE", "sub": "Formação de Esquadrão" },
+    "resonance": { "main": "RESSONÂNCIA", "sub": "Sistema de Melhoria" },
+    "store": { "main": "LOJA", "sub": "Comprar itens" },
+    "task": { "main": "TAREFA", "sub": "Lista de Missões" },
+    "notActive": "NÃO ATIVO",
+    "depot": { "main": "DEPÓSITO", "sub": "Ver Inventário" }
+  },
+  "footer": {
+    "friends": { "main": "Amigos", "sub": "Gerenciar contatos" },
+    "schedule": { "main": "Agenda", "sub": "Missões semanais" },
+    "events": { "main": "Eventos", "sub": "Eventos por tempo limitado" }
+  },
+  "banners": {
+    "echoChamberTag": "LIMITADO",
+    "echoChamberTitle": "CÂMARA DE ECO",
+    "newChapterTag": "NOVO CAPÍTULO",
+    "tidalWaveTitle": "MAREMOTO",
+    "specialOperationTag": "OP. ESPECIAL",
+    "crimsonTroupeTitle": "TRUPE CARMESIM"
+  },
+  "settings": {
+    "title": "Configurações",
+    "reset": "Restaurar Padrões",
+    "sidebar": {
+      "game": "Jogo",
+      "volume": "Volume",
+      "notification": "Notificação",
+      "others": "Outros",
+      "userCenter": "Central do Usuário"
+    },
+    "game": {
+      "title": "Configurações do Jogo",
+      "layoutMode": {
+        "title": "Modo de Layout",
+        "description": "Escolha entre um layout responsivo ou um tamanho fixo.",
+        "responsive": "Responsivo",
+        "fixed": "Fixo (1500x800)"
+      },
+      "language": {
+        "title": "Idioma",
+        "description": "Selecione o idioma de exibição do jogo.",
+        "en": "English (USA)",
+        "pt": "Português (BR)"
+      }
+    },
+    "underConstruction": {
+      "title": "Em Construção",
+      "description": "Esta seção está atualmente em desenvolvimento."
+    }
+  }
+}

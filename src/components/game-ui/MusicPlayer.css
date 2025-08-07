@@ -1,0 +1,165 @@
+.music-player-bar {
+    @apply absolute bottom-0 inset-x-0 h-20 bg-black/50 backdrop-blur-lg border-t border-white/10;
+}
+
+.music-player-content {
+    @apply grid grid-cols-3 items-center h-full px-6 gap-6 text-white;
+}
+
+.track-info-trigger {
+    @apply flex items-center gap-4 cursor-pointer;
+}
+
+.album-art-wrapper {
+    @apply relative w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center transition-transform duration-300;
+}
+
+.track-info-title {
+    @apply text-sm font-semibold truncate transition-colors;
+}
+
+.track-info-artist {
+    @apply text-xs text-muted-foreground;
+}
+
+.center-info-wrapper {
+    @apply flex items-center justify-center gap-4 text-sm text-muted-foreground;
+}
+
+.quick-shortcuts {
+    @apply flex items-center gap-2;
+}
+
+.shortcut-key {
+    @apply flex items-center justify-center w-8 h-8 bg-zinc-800/80 border border-zinc-600 rounded-md font-mono font-bold text-white/80 hover:bg-primary/20 hover:border-primary/50 transition-all;
+}
+
+.server-status-widget {
+    @apply flex flex-col gap-1 w-48;
+}
+
+.server-status-header {
+    @apply flex justify-between items-baseline;
+}
+
+.server-status-title {
+    @apply font-mono text-xs font-bold tracking-wider text-white/80;
+}
+
+.server-ping {
+    @apply flex items-center gap-1.5 font-mono text-xs text-green-400;
+}
+
+.online-indicator {
+    @apply w-1.5 h-1.5 rounded-full bg-green-500 shadow-[0_0_4px_1px] shadow-green-500/50;
+}
+
+.server-utilization-bar {
+    @apply w-full h-2 bg-zinc-800/80 border border-zinc-700/50 rounded-sm overflow-hidden p-0.5;
+}
+
+.server-utilization-fill {
+    @apply h-full bg-gradient-to-r from-primary/50 to-primary rounded-sm shadow-[0_0_8px] shadow-primary/50;
+}
+
+.right-info-wrapper {
+    @apply flex items-center justify-end;
+}
+
+.popover-container {
+    @apply bg-transparent border-none p-0 w-auto shadow-none;
+}
+
+.character-control-popover {
+    @apply w-[300px] mb-2 bg-black/70 backdrop-blur-xl border border-primary/30 text-white rounded-lg p-4;
+}
+
+.control-item {
+    @apply flex flex-col gap-2;
+}
+
+.control-label-wrapper {
+    @apply flex justify-between items-center;
+}
+
+.control-label {
+    @apply text-sm font-semibold text-white/80;
+}
+
+.control-value {
+    @apply text-sm font-mono text-primary;
+}
+
+.control-slider {
+    @apply w-full;
+}
+
+
+.music-player-popover {
+    @apply w-[350px] mb-2;
+}
+
+.music-player-popover-content {
+    @apply flex flex-col gap-4 rounded-lg p-4 bg-black/70 backdrop-blur-xl border border-primary/30 text-white;
+}
+
+.music-info-section {
+    @apply flex items-center gap-4;
+}
+
+.album-art-large-wrapper {
+    @apply relative w-16 h-16 rounded-md overflow-hidden flex-shrink-0;
+}
+
+.album-art-large {
+    @apply object-cover;
+}
+
+.track-details {
+    @apply flex-1;
+}
+
+.track-title {
+    @apply text-base font-bold truncate;
+}
+
+.track-artist {
+    @apply text-sm text-muted-foreground;
+}
+
+.progress-section {
+    @apply w-full;
+}
+
+.time-display {
+    @apply flex justify-between text-xs text-muted-foreground mt-1;
+}
+
+.controls-section {
+    @apply flex items-center justify-center gap-6;
+}
+
+.control-button {
+    @apply text-white/70 hover:text-white transition-colors;
+}
+
+.play-pause-button {
+    @apply w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors;
+}
+
+.volume-section {
+    @apply flex items-center justify-center gap-2;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 4s linear infinite;
+}
