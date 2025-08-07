@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "security:audit": "npm audit && npm outdated",
     "security:fix": "npm audit fix",
-    "prepare": "husky install"
+    "prepare": "node -e \"process.exit(process.env.CI==='true'||process.env.VERCEL==='1'?0:1)\" || node .husky/prepare.js"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.14.1",
@@ -68,6 +68,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "genkit-cli": "^0.0.2",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

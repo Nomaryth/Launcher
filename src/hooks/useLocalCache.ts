@@ -25,11 +25,11 @@ export const useLocalCache = <T>(config: Partial<CacheConfig> = {}) => {
     try {
       const stored = localStorage.getItem('nomary_cache');
       if (stored) {
-        const parsed = JSON.parse(stored);
-        const cacheMap = new Map(Object.entries(parsed));
+        const parsed = JSON.parse(stored) as Record<string, CacheItem<T>>;
+        const cacheMap = new Map<string, CacheItem<T>>(Object.entries(parsed) as [string, CacheItem<T>][]);
         
         const now = Date.now();
-        const validItems = new Map();
+        const validItems = new Map<string, CacheItem<T>>();
         
         for (const [key, item] of cacheMap) {
           if (now - item.timestamp < item.ttl) {
@@ -127,7 +127,7 @@ export const useLocalCache = <T>(config: Partial<CacheConfig> = {}) => {
 
   const cleanup = useCallback(() => {
     const now = Date.now();
-    const newCache = new Map();
+    const newCache = new Map<string, CacheItem<T>>();
     
     for (const [key, item] of cache) {
       if (now - item.timestamp < item.ttl) {

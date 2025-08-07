@@ -7,15 +7,17 @@ class RateLimiter {
     this.cache = new Map();
   }
 
-  private getKey(): string {
-    const headersList = headers();
-    return headersList.get('x-forwarded-for') || 
-           headersList.get('x-real-ip') || 
-           'unknown';
+  private async getKey(): Promise<string> {
+    const headersList = await headers();
+    return (
+      headersList.get('x-forwarded-for') ||
+      headersList.get('x-real-ip') ||
+      'unknown'
+    );
   }
 
   async check(limit: number, window: string): Promise<{ success: boolean; reset: number }> {
-    const key = this.getKey();
+    const key = await this.getKey();
     const now = Date.now();
     const windowMs = this.parseWindow(window);
     

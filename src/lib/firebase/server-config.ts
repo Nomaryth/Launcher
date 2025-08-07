@@ -7,21 +7,31 @@ const serverConfig = {
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
 export async function getFirebaseConfig() {
-  const headersList = headers();
+  const headersList = await headers();
   const origin = headersList.get('origin');
-  
-  if (!origin || !process.env.ALLOWED_ORIGINS?.includes(origin)) {
-    throw new Error('Unauthorized origin');
+
+  const allowedOrigins = process.env.ALLOWED_ORIGINS
+    ?.split(',')
+    .map((o) => o.trim())
+    .filter(Boolean);
+
+  if (process.env.NODE_ENV === 'production' && allowedOrigins && allowedOrigins.length > 0) {
+    if (!origin || !allowedOrigins.includes(origin)) {
+      throw new Error('Unauthorized origin');
+    }
   }
 
   return {
+    apiKey: serverConfig.apiKey,
     authDomain: serverConfig.authDomain,
     projectId: serverConfig.projectId,
     storageBucket: serverConfig.storageBucket,
     messagingSenderId: serverConfig.messagingSenderId,
+    appId: serverConfig.appId,
+    measurementId: serverConfig.measurementId,
   };
 }

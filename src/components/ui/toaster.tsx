@@ -54,7 +54,7 @@ export function Toaster() {
               </div>
               <div className="flex flex-col items-end gap-2">
                 {action}
-                <ToastClose className="shrink-0" />
+                {props.showClose !== false && <ToastClose className="shrink-0" />}
               </div>
             </div>
           </Toast>

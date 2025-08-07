@@ -44,11 +44,17 @@ const toastVariants = cva(
   }
 )
 
+interface CustomToastProps extends React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root>,
+  VariantProps<typeof toastVariants> {
+  hideCloseButton?: boolean;
+  showClose?: boolean;
+  autoClose?: boolean;
+}
+
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>,
-  React.ComponentPropsWithoutRef<typeof ToastPrimitives.Root> &
-    VariantProps<typeof toastVariants>
->(({ className, variant, ...props }, ref) => {
+  CustomToastProps
+>(({ className, variant, hideCloseButton = false, ...props }, ref) => {
   const getBorderColor = () => {
     switch (variant) {
       case "success":
@@ -63,14 +69,15 @@ const Toast = React.forwardRef<
         return "border-l-primary";
     }
   };
-  
   const { showClose, autoClose, ...rest } = props;
 
+  const rootExtraProps = autoClose === false ? { duration: 24 * 60 * 60 * 1000 } : {};
 
   return (
     <ToastPrimitives.Root
       ref={ref}
       className={cn(toastVariants({ variant }), className, getBorderColor(), "border-l-4")}
+      {...rootExtraProps}
       {...rest}
     >
       <DotGrid 
